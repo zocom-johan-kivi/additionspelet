@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Multiplikationstabellen</title>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script src="js/confetti-browser.js"></script>
+</head>
+
+<body>
+    <main id="app">
+        <section id="settings">
+            <header class="instructions">
+                <h2>Välj tabell nedan.</h2>
+                <p>För varje rätt svar får du poäng. Ju snabbare du svarar, desto högre poäng (max 30p / tal). Samla ihop så många poäng som möjligt på <em>2 minuter</em>.</p>
+            </header>
+            <section class="tables">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>10</button>
+            </section>
+        </section>
+        <section id="game">
+            <header>
+                <aside class="score">0p</aside>
+                <aside class="time">30s</aside>
+            </header>
+            <section class="center-stage">
+                <article class="problem"><span>3x3</span></article>
+                <article class="answer">33</article>
+                <button id="reset" class="reset">Starta om spel</button>
+            </section>
+            <footer>
+                <section class="keyboard">
+                    <div class="num">1</div>
+                    <div class="num">2</div>
+                    <div class="num">3</div>
+                    <div class="num">4</div>
+                    <div class="num">5</div>
+                    <div class="num">6</div>
+                    <div class="num">7</div>
+                    <div class="num">8</div>
+                    <div class="num">9</div>
+                    <div class="num blank"></div>
+                    <div class="num">0</div>
+                    <div class="num clear">C</div>
+                </section>
+            </footer>
+        </section>
+        <section id="game-over" class="hugo-a">
+            <h1>Spelet är över!</h1>
+            <p class="results"></p>
+            <button id="game-reset" class="reset">Starta en ny omgång</button>
+        </section>
+
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
