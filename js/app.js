@@ -5,10 +5,10 @@ const app = {
         score: 0,
         active: false,
         problemNo: 0,
-        currentTime: '2.00',
+        currentTime: '1.00',
         problemTimer: 30,
-        gameTimer: 120,
-        currentMathProblem: '3x5',
+        gameTimer: 60,
+        currentMathProblem: '1+1',
         answer: '',
         factor: 3
     },
@@ -113,9 +113,9 @@ const app = {
 
     },
     getMathProblem() {
-        const randA = Math.round(Math.random() * factor);
+        const randA = Math.round(Math.random() * this.state.factor);
         const randB = Math.round(Math.random() * 10);
-        this.state.currentMathProblem = `${randA} + ${randB}`;
+        this.state.currentMathProblem = `${randA}+${randB}`;
     },
     gameTimer: null,
     problemTimer: null,
@@ -123,8 +123,7 @@ const app = {
 
         console.info('Evaluating answer...');
 
-        const converted = this.state.currentMathProblem.replace('x', '*');
-        const correctAnswer = eval(converted);
+        const correctAnswer = eval(this.state.currentMathProblem);
 
         if (+this.state.answer === correctAnswer) {
             console.info('Corrent answer!');
@@ -191,8 +190,8 @@ const app = {
         this.state.problemTimer = 30;
     },
     resetGameTimer() {
-        this.state.currentTime = '2.00'
-        this.state.gameTimer = 180;
+        this.state.currentTime = '1.00'
+        this.state.gameTimer = 60;
     }
 }
 

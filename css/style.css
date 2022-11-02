@@ -9,11 +9,11 @@
     font-family: 'Fira Mono', monospace;
     color: rgba(255, 255, 255, .8);
     background-color: #222;
-}   
+}
 
 body {
     margin: 0;
-    background: linear-gradient(162.92deg, rgba(255, 0, 92, 0.3) 0%, rgba(255, 0, 92, 0) 99.34%), #193B64;
+    background: linear-gradient(162.92deg, rgba(255, 0, 25, 0.5) 0%, rgba(40, 40, 40, 0) 99.34%), #222;
     transition: background .2s ease;
 }
 
@@ -21,13 +21,13 @@ main {
     height: 100vh;
 }
 
-main > section {
+main>section {
     height: inherit;
     display: flex;
     flex-direction: column;
 }
 
-main > section > header {
+main>section>header {
     display: flex;
     padding: 1rem;
     justify-content: space-between;
@@ -101,13 +101,14 @@ main section>footer .keyboard {
     transition: all .1s ease;
     border-radius: .25rem;
     color: #eee;
-    box-shadow: 0 0 2rem rgba(0, 0, 0,.2);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .2);
 }
 
-.clear, .blank {
+.clear,
+.blank {
     background: none !important;
     box-shadow: 0 0 0 0.0 !important;
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, .8);
 }
 
 .clear:active {
@@ -118,7 +119,7 @@ main section>footer .keyboard {
 .keyboard .num:active {
     transform: scale(.92);
     background-color: rgb(30, 30, 30);
-    box-shadow: 0 0 1rem rgba(0, 0, 0,.4);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
 }
 
 #settings {
@@ -139,7 +140,7 @@ main section>footer .keyboard {
     line-height: 140%;
     letter-spacing: 100%;
     border-radius: 2px;
-    box-shadow: 0 0 3rem rgba(0, 0, 0,.4);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .4);
 }
 
 .instructions h2 {
@@ -171,6 +172,7 @@ main section>footer .keyboard {
     font-size: 1.5rem;
     color: #eee;
 }
+
 .tables button:active {
     color: #222;
     background-color: white;
@@ -235,43 +237,43 @@ button#reset {
     padding: .75rem 1rem;
     border: none;
     background: none;
-    color:rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, .6);
     border-radius: .5rem;
     transition: .1s ease;
 }
 
 button#reset:hover {
     cursor: pointer;
-    color:rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
     background-color: #c74343;
-    
+
 }
 
 @media screen and (min-width: 640px) {
-    
+
     #settings .instructions {
-    
+
         margin: 2rem auto;
         flex-direction: column;
         color: #222;
         line-height: 160%;
         letter-spacing: 100%;
         border-radius: 2px;
-        box-shadow: 0 0 3rem rgba(0, 0, 0,.4);
+        box-shadow: 0 0 3rem rgba(0, 0, 0, .4);
     }
-    
+
     .instructions h2 {
         margin-bottom: 1rem;
         font-size: 2rem;
     }
-    
+
     .instructions p {
         font-size: 1.2rem;
     }
 
     #settings .tables {
-        max-width: 800px; 
-        margin: auto;       
+        max-width: 800px;
+        margin: auto;
     }
 
     .tables button {
